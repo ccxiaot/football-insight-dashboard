@@ -48,6 +48,10 @@ describe('App', () => {
 
     expect(screen.getByRole('dialog', { name: /比利时 vs 突尼斯/ })).toBeInTheDocument();
     expect(screen.getByText('概率拆解')).toBeInTheDocument();
+    expect(screen.getByText('预测市场')).toBeInTheDocument();
+    expect(screen.getByText('模型深度解析')).toBeInTheDocument();
+    expect(screen.getByText('比分热区')).toBeInTheDocument();
+    expect(screen.getByText('风险复核')).toBeInTheDocument();
     expect(screen.getByText('主 -0.75')).toBeInTheDocument();
   });
 });
