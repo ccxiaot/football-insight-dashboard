@@ -54,11 +54,19 @@ https://ccxiaot.github.io/football-insight-dashboard/
 
 ## Data
 
-Static demo records live in:
+Generated demo records live in:
 
 ```text
-src/data/matches.ts
-src/data/syncMeta.ts
+public/data/matches-current.json
+public/data/matches-history.json
+public/data/sync-meta.json
 ```
 
-Replace those files or add a future sync workflow when a real data source is chosen.
+Regenerate them locally:
+
+```bash
+npm run sync:demo
+npm run validate:data
+```
+
+Bundled fallback data still exists under `src/data` so the built HTML can render when opened directly from disk with `file://`. Replace `scripts/syncDemoData.mjs` when a real data source is chosen.
