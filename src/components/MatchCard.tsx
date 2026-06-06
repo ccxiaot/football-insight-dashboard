@@ -13,6 +13,19 @@ const recommendationText = {
   avoid: '回避',
 };
 
+const riskText = {
+  low: '低风险',
+  medium: '中风险',
+  high: '高风险',
+};
+
+const statusText = {
+  finished: '已完场',
+  live: '进行中',
+  pending: '待确认',
+  scheduled: '待开赛',
+};
+
 export function MatchCard({ match, onOpen }: MatchCardProps) {
   return (
     <button
@@ -26,7 +39,12 @@ export function MatchCard({ match, onOpen }: MatchCardProps) {
           {match.matchNo ? `${match.matchNo} · ` : ''}
           {match.competition}
         </span>
-        <strong>{match.kickoff}</strong>
+        <strong>{match.date} {match.kickoff}</strong>
+      </div>
+      <div className="match-meta">
+        <span>{statusText[match.status ?? 'scheduled']}</span>
+        <span>让球 {match.handicap}</span>
+        <span>进球 {match.totalGoals}</span>
       </div>
       <div className="match-teams">
         <TeamBadge code={match.homeFlag} name={match.homeTeam} />
@@ -53,6 +71,11 @@ export function MatchCard({ match, onOpen }: MatchCardProps) {
         </div>
       ) : null}
       <p>{match.analysis}</p>
+      <div className="tag-row">
+        {match.tags.slice(0, 3).map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
       <div className="match-footer">
         <span>
           <Gauge size={15} />
@@ -60,8 +83,11 @@ export function MatchCard({ match, onOpen }: MatchCardProps) {
         </span>
         <span>
           <AlertTriangle size={15} />
-          {match.riskLevel}
+          {riskText[match.riskLevel]}
         </span>
+      </div>
+      <div className="confidence-track" aria-hidden="true">
+        <i style={{ width: `${match.confidence}%` }} />
       </div>
     </button>
   );
