@@ -1,284 +1,328 @@
 [
   {
-    "id": "bel-tun-20260606",
+    "id": "sporttery_2040130",
+    "source": "sporttery",
+    "sourceMatchId": "2040130",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
     "date": "2026-06-06",
     "kickoff": "21:00",
-    "competition": "国际友谊赛",
+    "competition": "国际赛",
     "homeTeam": "比利时",
     "awayTeam": "突尼斯",
     "homeFlag": "be",
     "awayFlag": "tn",
     "odds": {
-      "home": 1.62,
-      "draw": 3.7,
-      "away": 5.4
+      "home": 1.21,
+      "draw": 4.95,
+      "away": 9.9,
+      "line": ""
     },
     "prediction": "主胜方向",
     "recommendation": "high",
-    "confidence": 78,
-    "riskLevel": "medium",
+    "confidence": 88,
+    "riskLevel": "low",
     "tags": [
-      "主场强势",
-      "定位球优势"
+      "竞彩官方",
+      "含让球盘",
+      "周六207"
     ],
-    "analysis": "比利时中前场压迫质量更稳定，若早段取得领先，比赛节奏会更利于主队。",
+    "analysis": "基于竞彩胜平负赔率 1.21/4.95/9.9，模型暂时倾向 比利时，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 58,
-      "draw": 25,
-      "away": 17
+      "home": 73,
+      "draw": 18,
+      "away": 9
     },
-    "handicap": "主 -0.75",
-    "totalGoals": "2-3 球",
+    "handicap": "让球 -1.00",
+    "totalGoals": "大 2.5",
     "result": "pending"
   },
   {
-    "id": "svk-mne-20260606",
-    "date": "2026-06-06",
-    "kickoff": "22:30",
-    "competition": "欧洲区观察",
-    "homeTeam": "斯洛伐克",
-    "awayTeam": "黑山",
-    "homeFlag": "sk",
-    "awayFlag": "me",
+    "id": "sporttery_2040131",
+    "source": "sporttery",
+    "sourceMatchId": "2040131",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "date": "2026-06-07",
+    "kickoff": "01:45",
+    "competition": "国际赛",
+    "homeTeam": "葡萄牙",
+    "awayTeam": "智利",
+    "homeFlag": "pt",
     "odds": {
-      "home": 2.12,
-      "draw": 3.05,
-      "away": 3.35
+      "home": 1.15,
+      "draw": 5.65,
+      "away": 12,
+      "line": ""
     },
-    "prediction": "平局保护",
-    "recommendation": "watch",
-    "confidence": 61,
-    "riskLevel": "high",
+    "prediction": "主胜方向",
+    "recommendation": "high",
+    "confidence": 88,
+    "riskLevel": "low",
     "tags": [
-      "节奏偏慢",
-      "进球期望低"
+      "竞彩官方",
+      "含让球盘",
+      "周六208"
     ],
-    "analysis": "双方转换效率接近，模型更看重低比分区间，单选价值不够突出。",
+    "analysis": "基于竞彩胜平负赔率 1.15/5.65/12，模型暂时倾向 葡萄牙，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 35,
-      "draw": 34,
-      "away": 31
+      "home": 77,
+      "draw": 16,
+      "away": 7
     },
-    "handicap": "客 +0.25",
+    "handicap": "让球 -2.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
+  },
+  {
+    "id": "sporttery_2040132",
+    "source": "sporttery",
+    "sourceMatchId": "2040132",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "date": "2026-06-07",
+    "kickoff": "01:45",
+    "competition": "国际赛",
+    "homeTeam": "罗马尼亚",
+    "awayTeam": "威尔士",
+    "homeFlag": "ro",
+    "odds": {
+      "home": 2.65,
+      "draw": 2.7,
+      "away": 2.63,
+      "line": ""
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 73,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六209"
+    ],
+    "analysis": "基于竞彩胜平负赔率 2.65/2.7/2.63，模型暂时倾向 威尔士，可信度 73%。真实临场仍需结合首发和盘口变化。",
+    "probabilities": {
+      "home": 33,
+      "draw": 33,
+      "away": 34
+    },
+    "handicap": "让球 +1.00",
     "totalGoals": "小 2.5",
     "result": "pending"
   },
   {
-    "id": "can-irl-20260606",
-    "date": "2026-06-06",
-    "kickoff": "23:50",
-    "competition": "国际友谊赛",
-    "homeTeam": "加拿大",
-    "awayTeam": "爱尔兰",
-    "homeFlag": "ca",
-    "awayFlag": "ie",
+    "id": "sporttery_2040133",
+    "source": "sporttery",
+    "sourceMatchId": "2040133",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "date": "2026-06-07",
+    "kickoff": "02:30",
+    "competition": "国际赛",
+    "homeTeam": "美国",
+    "awayTeam": "德国",
+    "homeFlag": "us",
+    "awayFlag": "de",
     "odds": {
-      "home": 2.28,
-      "draw": 3.15,
-      "away": 2.95
+      "home": 4.8,
+      "draw": 3.8,
+      "away": 1.52,
+      "line": ""
     },
-    "prediction": "主队不败",
-    "recommendation": "watch",
-    "confidence": 64,
-    "riskLevel": "medium",
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 88,
+    "riskLevel": "low",
     "tags": [
-      "边路速度",
-      "轮换影响"
+      "竞彩官方",
+      "含让球盘",
+      "周六210"
     ],
-    "analysis": "加拿大边路冲击更强，但友谊赛轮换会放大临场不确定性。",
+    "analysis": "基于竞彩胜平负赔率 4.8/3.8/1.52，模型暂时倾向 德国，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 42,
-      "draw": 31,
-      "away": 27
+      "home": 18,
+      "draw": 23,
+      "away": 58
     },
-    "handicap": "主 0",
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
+  },
+  {
+    "id": "sporttery_2040134",
+    "source": "sporttery",
+    "sourceMatchId": "2040134",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "date": "2026-06-07",
+    "kickoff": "03:00",
+    "competition": "国际赛",
+    "homeTeam": "澳大利亚",
+    "awayTeam": "瑞士",
+    "homeFlag": "au",
+    "awayFlag": "ch",
+    "odds": {
+      "home": 5.85,
+      "draw": 3.6,
+      "away": 1.47,
+      "line": ""
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 88,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六211"
+    ],
+    "analysis": "基于竞彩胜平负赔率 5.85/3.6/1.47，模型暂时倾向 瑞士，可信度 88%。真实临场仍需结合首发和盘口变化。",
+    "probabilities": {
+      "home": 15,
+      "draw": 25,
+      "away": 60
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
+  },
+  {
+    "id": "sporttery_2040135",
+    "source": "sporttery",
+    "sourceMatchId": "2040135",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "date": "2026-06-07",
+    "kickoff": "03:00",
+    "competition": "国际赛",
+    "homeTeam": "巴拿马",
+    "awayTeam": "波黑",
+    "awayFlag": "ba",
+    "odds": {
+      "home": 3.32,
+      "draw": 2.92,
+      "away": 2.06,
+      "line": ""
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 85,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六212"
+    ],
+    "analysis": "基于竞彩胜平负赔率 3.32/2.92/2.06，模型暂时倾向 波黑，可信度 85%。真实临场仍需结合首发和盘口变化。",
+    "probabilities": {
+      "home": 27,
+      "draw": 30,
+      "away": 43
+    },
+    "handicap": "让球 +1.00",
     "totalGoals": "2-3 球",
     "result": "pending"
   },
   {
-    "id": "ger-aus-20260607",
+    "id": "sporttery_2040137",
+    "source": "sporttery",
+    "sourceMatchId": "2040137",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
     "date": "2026-06-07",
-    "kickoff": "18:00",
-    "competition": "国际友谊赛",
-    "homeTeam": "德国",
-    "awayTeam": "澳大利亚",
-    "homeFlag": "de",
-    "awayFlag": "au",
+    "kickoff": "04:00",
+    "competition": "国际赛",
+    "homeTeam": "玻利维亚",
+    "awayTeam": "苏格兰",
     "odds": {
-      "home": 1.5,
-      "draw": 4.1,
-      "away": 6.4
+      "home": 6.75,
+      "draw": 4.25,
+      "away": 1.34,
+      "line": ""
     },
-    "prediction": "主胜",
+    "prediction": "客胜方向",
     "recommendation": "high",
-    "confidence": 79,
+    "confidence": 88,
     "riskLevel": "low",
     "tags": [
-      "控球优势",
-      "主队火力"
+      "竞彩官方",
+      "含让球盘",
+      "周六214"
     ],
-    "analysis": "德国中场推进和禁区触球次数预期更高，主胜模型权重集中。",
+    "analysis": "基于竞彩胜平负赔率 6.75/4.25/1.34，模型暂时倾向 苏格兰，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 63,
-      "draw": 23,
-      "away": 14
+      "home": 13,
+      "draw": 21,
+      "away": 66
     },
-    "handicap": "主 -1",
-    "totalGoals": "2-4 球"
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
   },
   {
-    "id": "sui-pan-20260607",
+    "id": "sporttery_2040138",
+    "source": "sporttery",
+    "sourceMatchId": "2040138",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
     "date": "2026-06-07",
-    "kickoff": "20:30",
-    "competition": "杯赛热身",
-    "homeTeam": "瑞士",
-    "awayTeam": "巴拿马",
-    "homeFlag": "ch",
-    "awayFlag": "pa",
-    "odds": {
-      "home": 1.72,
-      "draw": 3.45,
-      "away": 4.8
-    },
-    "prediction": "主队不败",
-    "recommendation": "watch",
-    "confidence": 66,
-    "riskLevel": "medium",
-    "tags": [
-      "防守稳定",
-      "小比分"
-    ],
-    "analysis": "瑞士防线稳定性较好，但进攻效率未到高信区间。",
-    "probabilities": {
-      "home": 49,
-      "draw": 30,
-      "away": 21
-    },
-    "handicap": "主 -0.5",
-    "totalGoals": "小 3"
-  },
-  {
-    "id": "bra-tur-20260607",
-    "date": "2026-06-07",
-    "kickoff": "23:00",
-    "competition": "焦点观察",
+    "kickoff": "06:00",
+    "competition": "国际赛",
     "homeTeam": "巴西",
-    "awayTeam": "土耳其",
+    "awayTeam": "埃及",
     "homeFlag": "br",
-    "awayFlag": "tr",
     "odds": {
-      "home": 1.68,
-      "draw": 3.75,
-      "away": 4.9
+      "home": 1.2,
+      "draw": 5,
+      "away": 10.5,
+      "line": ""
     },
     "prediction": "主胜方向",
     "recommendation": "high",
-    "confidence": 76,
-    "riskLevel": "medium",
+    "confidence": 88,
+    "riskLevel": "low",
     "tags": [
-      "个人能力",
-      "反击空间"
+      "竞彩官方",
+      "含让球盘",
+      "周六215"
     ],
-    "analysis": "巴西前场单点爆破能力强，土耳其若压上会留下反击空间。",
+    "analysis": "基于竞彩胜平负赔率 1.2/5/10.5，模型暂时倾向 巴西，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 56,
-      "draw": 26,
-      "away": 18
+      "home": 74,
+      "draw": 18,
+      "away": 8
     },
-    "handicap": "主 -0.75",
-    "totalGoals": "大 2.25"
+    "handicap": "让球 -1.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
   },
   {
-    "id": "arg-bih-20260607",
+    "id": "sporttery_2040139",
+    "source": "sporttery",
+    "sourceMatchId": "2040139",
+    "capturedAt": "2026-06-06T11:08:55.681Z",
     "date": "2026-06-07",
-    "kickoff": "02:20",
-    "competition": "赛前观察",
-    "homeTeam": "阿根廷",
-    "awayTeam": "波黑",
-    "homeFlag": "ar",
-    "awayFlag": "ba",
+    "kickoff": "06:00",
+    "competition": "国际赛",
+    "homeTeam": "委内瑞拉",
+    "awayTeam": "土耳其",
+    "awayFlag": "tr",
     "odds": {
-      "home": 1.55,
-      "draw": 3.85,
-      "away": 5.9
+      "home": 5.6,
+      "draw": 3.7,
+      "away": 1.47,
+      "line": ""
     },
-    "prediction": "主胜",
-    "recommendation": "watch",
-    "confidence": 69,
-    "riskLevel": "medium",
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 88,
+    "riskLevel": "low",
     "tags": [
-      "阵容深度",
-      "慢热风险"
+      "竞彩官方",
+      "含让球盘",
+      "周六216"
     ],
-    "analysis": "阿根廷整体优势明确，但上半场节奏可能偏慢。",
+    "analysis": "基于竞彩胜平负赔率 5.6/3.7/1.47，模型暂时倾向 土耳其，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 59,
+      "home": 16,
       "draw": 24,
-      "away": 17
+      "away": 60
     },
-    "handicap": "主 -0.75",
-    "totalGoals": "2-3 球"
-  },
-  {
-    "id": "jpn-kor-20260608",
-    "date": "2026-06-08",
-    "kickoff": "19:35",
-    "competition": "亚洲焦点",
-    "homeTeam": "日本",
-    "awayTeam": "韩国",
-    "homeFlag": "jp",
-    "awayFlag": "kr",
-    "odds": {
-      "home": 2.18,
-      "draw": 3.2,
-      "away": 3.15
-    },
-    "prediction": "小比分",
-    "recommendation": "watch",
-    "confidence": 63,
-    "riskLevel": "high",
-    "tags": [
-      "德比属性",
-      "身体对抗"
-    ],
-    "analysis": "德比属性会压低进攻容错，大小球比胜平负更清晰。",
-    "probabilities": {
-      "home": 36,
-      "draw": 33,
-      "away": 31
-    },
-    "handicap": "主 0",
-    "totalGoals": "小 2.5"
-  },
-  {
-    "id": "mex-col-20260608",
-    "date": "2026-06-08",
-    "kickoff": "09:00",
-    "competition": "美洲热身",
-    "homeTeam": "墨西哥",
-    "awayTeam": "哥伦比亚",
-    "homeFlag": "mx",
-    "awayFlag": "co",
-    "odds": {
-      "home": 2.65,
-      "draw": 3.25,
-      "away": 2.48
-    },
-    "prediction": "客队不败",
-    "recommendation": "watch",
-    "confidence": 62,
-    "riskLevel": "medium",
-    "tags": [
-      "反击效率",
-      "中场硬度"
-    ],
-    "analysis": "哥伦比亚反击质量略高，但客场热身赛不宜拉满仓位。",
-    "probabilities": {
-      "home": 31,
-      "draw": 32,
-      "away": 37
-    },
-    "handicap": "客 0",
-    "totalGoals": "2-3 球"
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "pending"
   }
 ]

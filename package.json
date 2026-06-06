@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "sync:demo": "node scripts/syncDemoData.mjs",
+    "sync:sporttery": "node scripts/syncSportteryData.mjs",
     "validate:data": "node scripts/validateDemoData.mjs",
     "test": "vitest",
     "preview": "vite preview"

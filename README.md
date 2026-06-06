@@ -66,7 +66,8 @@ Regenerate them locally:
 
 ```bash
 npm run sync:demo
+npm run sync:sporttery
 npm run validate:data
 ```
 
-Bundled fallback data still exists under `src/data` so the built HTML can render when opened directly from disk with `file://`. Replace `scripts/syncDemoData.mjs` when a real data source is chosen.
+`sync:sporttery` reads China Sporttery football data from `webapi.sporttery.cn`. `sync:demo` remains available for offline demos. Bundled fallback data still exists under `src/data` so the built HTML can render when opened directly from disk with `file://`.
