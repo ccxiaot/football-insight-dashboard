@@ -1,40 +1,40 @@
 {
-  "generatedAt": "2026-06-06T11:46:43.551Z",
-  "sourceLabel": "sporttery",
+  "generatedAt": "2026-06-06T14:07:44.866Z",
+  "sourceLabel": "sporttery-fallback",
   "currentCount": 27,
   "historyCount": 9,
-  "status": "已从中国体育彩票竞彩接口同步赛程与赔率；分页接口受限时使用同源扩展样本补足看板展示。",
+  "status": "Sporttery 同步失败，已保留上一次可用 JSON 数据。",
   "mode": "generated",
   "sourceResults": [
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchListV1.qry?clientCode=3001",
-      "ok": true,
-      "rows": 18
+      "ok": false,
+      "error": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchListV1.qry?clientCode=3001 -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had&channel=c",
-      "ok": true,
-      "rows": 11
+      "ok": false,
+      "error": "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had&channel=c -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0 -> HTTP 403"
+      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=live&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=live&pageSize=80&pageNo=1&pageType=0 -> HTTP 403"
+      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=live&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=result&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=result&pageSize=80&pageNo=1&pageType=0 -> HTTP 403"
+      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=result&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=all&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=all&pageSize=80&pageNo=1&pageType=0 -> HTTP 403"
+      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=all&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
     }
   ]
 }
