@@ -17,7 +17,22 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: '赛前观察' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '赛事预测' })).toBeInTheDocument();
     expect(await screen.findByText('临场观察')).toBeInTheDocument();
+    expect(screen.getByText('赛前决策矩阵')).toBeInTheDocument();
+    expect(screen.getByText('盘口复核队列')).toBeInTheDocument();
     expect(screen.queryByText('赛事筛选')).not.toBeInTheDocument();
+  });
+
+  it('renders a fuller world cup desk', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await user.click(screen.getByRole('button', { name: '世界杯' }));
+
+    expect(await screen.findByText('2026 世界杯专题')).toBeInTheDocument();
+    expect(screen.getByText('小组路径预测')).toBeInTheDocument();
+    expect(screen.getByText('淘汰赛路径')).toBeInTheDocument();
+    expect(screen.getByText('冠军候选观察')).toBeInTheDocument();
+    expect(screen.getByText('世界杯观察场次')).toBeInTheDocument();
   });
 
   it('keeps prediction filters on the prediction view', async () => {

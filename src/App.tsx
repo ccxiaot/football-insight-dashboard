@@ -11,6 +11,7 @@ import { PreMatchOverview } from './components/PreMatchOverview';
 import { PredictionsTable } from './components/PredictionsTable';
 import { SummaryGrid } from './components/SummaryGrid';
 import { SyncPanel } from './components/SyncPanel';
+import { WorldCupDesk } from './components/WorldCupDesk';
 import { WorldCupSpotlight } from './components/WorldCupSpotlight';
 import {
   calculateDashboardMetrics,
@@ -121,7 +122,7 @@ export default function App() {
           </div>
         ) : null}
         {activeView === 'worldcup' && featuredMatch ? (
-          <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />
+          <WorldCupDesk matches={matches} onOpenMatch={setSelectedMatch} />
         ) : null}
         {activeView === 'betslip' ? <BetSlipPanel matches={matches} /> : null}
         {activeView === 'challenge' ? <HitChallenge matches={matches} /> : null}

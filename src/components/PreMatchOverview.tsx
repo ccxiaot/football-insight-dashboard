@@ -1,4 +1,4 @@
-import { AlertTriangle, ClipboardCheck, Clock, Gauge, ShieldAlert } from 'lucide-react';
+import { AlertTriangle, ClipboardCheck, Clock, Gauge, ShieldAlert, Target, TrendingUp } from 'lucide-react';
 import type { DashboardMetrics, MatchPrediction, RecommendationGroups, SyncMeta } from '../types';
 import { MatchCard } from './MatchCard';
 import { SummaryGrid } from './SummaryGrid';
@@ -48,6 +48,56 @@ export function PreMatchOverview({
     (match) => match.recommendation === 'watch' || match.riskLevel !== 'low',
   ).length;
   const lowConfidenceCount = matches.filter((match) => match.confidence < 68).length;
+  const topPick = matches
+    .filter((match) => match.recommendation === 'high')
+    .sort((left, right) => right.confidence - left.confidence)[0] ?? featuredMatch;
+  const waitPick = matches
+    .filter((match) => match.recommendation === 'watch')
+    .sort((left, right) => right.confidence - left.confidence)[0] ?? upcomingMatches[0] ?? featuredMatch;
+  const avoidPick = matches
+    .filter((match) => match.recommendation === 'avoid' || match.riskLevel === 'high')
+    .sort((left, right) => left.confidence - right.confidence)[0] ?? upcomingMatches[1] ?? featuredMatch;
+  const latePick = upcomingMatches.find((match) => match.handicapOdds?.line || match.handicap) ?? featuredMatch;
+
+  const decisionCards = [
+    {
+      icon: <Target size={18} />,
+      label: '主推候选',
+      match: topPick,
+      value: `${topPick.prediction} / ${topPick.confidence}%`,
+      note: '模型方向、欧赔倾向和风险等级相对一致，优先进入演示主线。',
+    },
+    {
+      icon: <Clock size={18} />,
+      label: '观察等待',
+      match: waitPick,
+      value: `${waitPick.totalGoals} 球路`,
+      note: '先保留方向，等首发、临场赔率和盘口变化二次确认。',
+    },
+    {
+      icon: <AlertTriangle size={18} />,
+      label: '回避场次',
+      match: avoidPick,
+      value: `风险 ${avoidPick.riskLevel}`,
+      note: '置信度或风险结构不适合做强推荐，只放入复盘观察。',
+    },
+    {
+      icon: <TrendingUp size={18} />,
+      label: '临场复核',
+      match: latePick,
+      value: latePick.handicapOdds?.line ?? latePick.handicap,
+      note: '让球盘与胜平负方向需要同步验证，盘口跳动时降低仓位。',
+    },
+  ];
+
+  const reviewQueue = matches
+    .filter((match) => match.status !== 'finished')
+    .sort((left, right) => {
+      const leftScore = (left.riskLevel === 'high' ? 3 : left.riskLevel === 'medium' ? 2 : 1) * 100 - left.confidence;
+      const rightScore = (right.riskLevel === 'high' ? 3 : right.riskLevel === 'medium' ? 2 : 1) * 100 - right.confidence;
+      return rightScore - leftScore;
+    })
+    .slice(0, 6);
 
   const riskCards = [
     {
@@ -75,6 +125,26 @@ export function PreMatchOverview({
       <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={onOpenMatch} />
       <SummaryGrid groups={groups} metrics={metrics} />
       <SyncPanel meta={syncMeta} statusCounts={statusCounts} />
+      <section className="prematch-matrix" aria-label="赛前决策矩阵">
+        <div className="section-title">
+          <span className="eyebrow">Decision Matrix</span>
+          <h2>赛前决策矩阵</h2>
+          <p>把今日比赛拆成主推、观察、回避和临场复核四个动作，方便演示时快速说明推荐依据。</p>
+        </div>
+        <div className="prematch-matrix-grid">
+          {decisionCards.map((card) => (
+            <button className="prematch-matrix-card" key={card.label} onClick={() => onOpenMatch(card.match)} type="button">
+              <span className="risk-icon">{card.icon}</span>
+              <small>{card.label}</small>
+              <strong>
+                {card.match.homeTeam} vs {card.match.awayTeam}
+              </strong>
+              <b>{card.value}</b>
+              <p>{card.note}</p>
+            </button>
+          ))}
+        </div>
+      </section>
       <section className="overview-layout" aria-label="赛前观察工作台">
         <div className="overview-main">
           <div className="section-title">
@@ -125,6 +195,29 @@ export function PreMatchOverview({
             </small>
           </div>
         </aside>
+      </section>
+      <section className="odds-review-panel" aria-label="盘口复核队列">
+        <div className="section-title">
+          <span className="eyebrow">Odds Review</span>
+          <h2>盘口复核队列</h2>
+          <p>优先列出风险更高、让球信息更敏感的场次，临场只需要沿着队列逐场复核。</p>
+        </div>
+        <div className="odds-review-list">
+          {reviewQueue.map((match) => (
+            <button key={match.id} onClick={() => onOpenMatch(match)} type="button">
+              <span>
+                {match.kickoff}
+                <small>{match.competition}</small>
+              </span>
+              <strong>
+                {match.homeTeam} vs {match.awayTeam}
+              </strong>
+              <em>{match.handicapOdds?.line ?? match.handicap}</em>
+              <b>{match.prediction}</b>
+              <i>{match.confidence}%</i>
+            </button>
+          ))}
+        </div>
       </section>
     </>
   );
