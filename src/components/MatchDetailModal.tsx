@@ -36,6 +36,27 @@ export function MatchDetailModal({ match, onClose }: MatchDetailModalProps) {
           <span>平局 {match.probabilities.draw}%</span>
           <span>客胜 {match.probabilities.away}%</span>
         </div>
+        {match.odds ? (
+          <>
+            <h3>竞彩 SP</h3>
+            <div className="prob-grid">
+              <span>胜 {match.odds.home}</span>
+              <span>平 {match.odds.draw}</span>
+              <span>负 {match.odds.away}</span>
+            </div>
+          </>
+        ) : null}
+        {match.handicapOdds ? (
+          <>
+            <h3>让球胜平负</h3>
+            <div className="prob-grid">
+              <span>{match.handicapOdds.line || '让球'}</span>
+              <span>胜 {match.handicapOdds.home}</span>
+              <span>平 {match.handicapOdds.draw}</span>
+              <span>负 {match.handicapOdds.away}</span>
+            </div>
+          </>
+        ) : null}
         <dl className="detail-list">
           <div>
             <dt>让球参考</dt>

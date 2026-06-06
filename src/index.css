@@ -79,7 +79,8 @@ main {
 }
 
 .nav-tabs,
-.date-filters {
+.date-filters,
+.toolbar-row {
   display: flex;
   gap: 8px;
   overflow-x: auto;
@@ -87,6 +88,7 @@ main {
 
 .nav-tab,
 .date-pill,
+.filter-chip,
 .notice-bar button {
   display: inline-flex;
   align-items: center;
@@ -106,7 +108,8 @@ main {
 }
 
 .nav-tab.active,
-.date-pill.active {
+.date-pill.active,
+.filter-chip.active {
   border-color: #0f766e;
   color: #0f766e;
   background: #ecfdf5;
@@ -193,6 +196,11 @@ main {
   background: #f1f5f9;
   color: #334155;
   font-size: 13px;
+}
+
+.odds-row.muted span {
+  background: #eef2ff;
+  color: #3730a3;
 }
 
 .featured-match,
@@ -316,6 +324,40 @@ dd {
 
 .date-filters {
   margin-bottom: 16px;
+}
+
+.match-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+  padding: 14px;
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.match-toolbar strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.filter-chip {
+  min-height: 34px;
+  padding: 0 10px;
+}
+
+.filter-chip span {
+  display: inline-grid;
+  min-width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 12px;
 }
 
 .date-pill {
@@ -475,6 +517,7 @@ dd {
 
   .spotlight,
   .sync-panel,
+  .match-toolbar,
   .summary-grid,
   .match-grid {
     grid-template-columns: 1fr;
