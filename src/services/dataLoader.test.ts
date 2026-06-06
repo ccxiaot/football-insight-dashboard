@@ -17,8 +17,7 @@ describe('loadDashboardData', () => {
 
   it('loads generated JSON data over http', async () => {
     vi.spyOn(window, 'location', 'get').mockReturnValue({ protocol: 'http:' } as Location);
-    vi.stubGlobal(
-      'fetch',
+    vi.spyOn(window, 'fetch').mockImplementation(
       vi
         .fn()
         .mockResolvedValueOnce({ ok: false })
@@ -54,7 +53,7 @@ describe('loadDashboardData', () => {
             historyCount: 0,
             status: 'generated',
           }),
-        }),
+        }) as unknown as typeof fetch,
     );
 
     const data = await loadDashboardData();

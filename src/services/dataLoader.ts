@@ -26,9 +26,13 @@ async function loadFromGeneratedJson(): Promise<DashboardData> {
   const basePaths = ['./data', '/data', '/football-insight-dashboard/data'];
 
   for (const basePath of basePaths) {
-    const data = await tryLoadPath(basePath);
-    if (data) {
-      return data;
+    try {
+      const data = await tryLoadPath(basePath);
+      if (data) {
+        return data;
+      }
+    } catch {
+      // Keep trying the next static data base path.
     }
   }
 
@@ -37,16 +41,16 @@ async function loadFromGeneratedJson(): Promise<DashboardData> {
 
 async function tryLoadPath(basePath: string): Promise<DashboardData | null> {
   const [matchesResponse, syncResponse] = await Promise.all([
-    fetch(`${basePath}/matches-current.json`),
-    fetch(`${basePath}/sync-meta.json`),
+    getJson(`${basePath}/matches-current.json`),
+    getJson(`${basePath}/sync-meta.json`),
   ]);
 
-  if (!matchesResponse.ok || !syncResponse.ok) {
+  if (!matchesResponse || !syncResponse) {
     return null;
   }
 
-  const matches = (await matchesResponse.json()) as MatchPrediction[];
-  const syncMeta = (await syncResponse.json()) as SyncMeta;
+  const matches = matchesResponse as MatchPrediction[];
+  const syncMeta = syncResponse as SyncMeta;
 
   if (!Array.isArray(matches) || matches.length === 0) {
     return null;
@@ -59,4 +63,37 @@ async function tryLoadPath(basePath: string): Promise<DashboardData | null> {
       mode: 'generated',
     },
   };
+}
+
+async function getJson(url: string): Promise<unknown | null> {
+  if (typeof window.fetch === 'function') {
+    const response = await window.fetch(url);
+    if (!response.ok) {
+      return null;
+    }
+    try {
+      return await response.json();
+    } catch {
+      return null;
+    }
+  }
+
+  return new Promise((resolve) => {
+    const request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.responseType = 'json';
+    request.onload = () => {
+      if (request.status < 200 || request.status >= 300) {
+        resolve(null);
+        return;
+      }
+      try {
+        resolve(request.response ?? JSON.parse(request.responseText));
+      } catch {
+        resolve(null);
+      }
+    };
+    request.onerror = () => resolve(null);
+    request.send();
+  });
 }
