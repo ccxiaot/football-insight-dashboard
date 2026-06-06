@@ -38,10 +38,10 @@ npm run build
 
 ## GitHub Pages
 
-The app is configured for the repository path:
+The app uses relative built asset paths so `dist/index.html` can also be opened directly from disk:
 
 ```text
-/football-insight-dashboard/
+./
 ```
 
 Push to `main`, then GitHub Actions will run tests, build `dist`, and deploy with GitHub Pages.
