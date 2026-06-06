@@ -3,7 +3,9 @@
     "id": "sporttery_2040130",
     "source": "sporttery",
     "sourceMatchId": "2040130",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六207",
+    "status": "scheduled",
     "date": "2026-06-06",
     "kickoff": "21:00",
     "competition": "国际赛",
@@ -12,10 +14,16 @@
     "homeFlag": "be",
     "awayFlag": "tn",
     "odds": {
-      "home": 1.21,
-      "draw": 4.95,
-      "away": 9.9,
+      "home": 1.23,
+      "draw": 4.75,
+      "away": 9.4,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.89,
+      "draw": 3.35,
+      "away": 3.32,
+      "line": "-1.00"
     },
     "prediction": "主胜方向",
     "recommendation": "high",
@@ -26,10 +34,10 @@
       "含让球盘",
       "周六207"
     ],
-    "analysis": "基于竞彩胜平负赔率 1.21/4.95/9.9，模型暂时倾向 比利时，可信度 88%。真实临场仍需结合首发和盘口变化。",
+    "analysis": "基于竞彩胜平负赔率 1.23/4.75/9.4，模型暂时倾向 比利时，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
-      "home": 73,
-      "draw": 18,
+      "home": 72,
+      "draw": 19,
       "away": 9
     },
     "handicap": "让球 -1.00",
@@ -40,7 +48,9 @@
     "id": "sporttery_2040131",
     "source": "sporttery",
     "sourceMatchId": "2040131",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六208",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "01:45",
     "competition": "国际赛",
@@ -52,6 +62,12 @@
       "draw": 5.65,
       "away": 12,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.5,
+      "draw": 3.7,
+      "away": 2.18,
+      "line": "-2.00"
     },
     "prediction": "主胜方向",
     "recommendation": "high",
@@ -76,7 +92,9 @@
     "id": "sporttery_2040132",
     "source": "sporttery",
     "sourceMatchId": "2040132",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六209",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "01:45",
     "competition": "国际赛",
@@ -85,11 +103,17 @@
     "homeFlag": "ro",
     "odds": {
       "home": 2.65,
-      "draw": 2.7,
-      "away": 2.63,
+      "draw": 2.63,
+      "away": 2.69,
       "line": ""
     },
-    "prediction": "客胜方向",
+    "handicapOdds": {
+      "home": 1.35,
+      "draw": 4.35,
+      "away": 6.3,
+      "line": "+1.00"
+    },
+    "prediction": "平局保护",
     "recommendation": "high",
     "confidence": 73,
     "riskLevel": "low",
@@ -98,11 +122,11 @@
       "含让球盘",
       "周六209"
     ],
-    "analysis": "基于竞彩胜平负赔率 2.65/2.7/2.63，模型暂时倾向 威尔士，可信度 73%。真实临场仍需结合首发和盘口变化。",
+    "analysis": "基于竞彩胜平负赔率 2.65/2.63/2.69，模型暂时倾向 平局方向，可信度 73%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
       "home": 33,
-      "draw": 33,
-      "away": 34
+      "draw": 34,
+      "away": 33
     },
     "handicap": "让球 +1.00",
     "totalGoals": "小 2.5",
@@ -112,7 +136,9 @@
     "id": "sporttery_2040133",
     "source": "sporttery",
     "sourceMatchId": "2040133",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六210",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "02:30",
     "competition": "国际赛",
@@ -122,9 +148,15 @@
     "awayFlag": "de",
     "odds": {
       "home": 4.8,
-      "draw": 3.8,
-      "away": 1.52,
+      "draw": 3.75,
+      "away": 1.53,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.17,
+      "draw": 3.55,
+      "away": 2.59,
+      "line": "+1.00"
     },
     "prediction": "客胜方向",
     "recommendation": "high",
@@ -135,10 +167,10 @@
       "含让球盘",
       "周六210"
     ],
-    "analysis": "基于竞彩胜平负赔率 4.8/3.8/1.52，模型暂时倾向 德国，可信度 88%。真实临场仍需结合首发和盘口变化。",
+    "analysis": "基于竞彩胜平负赔率 4.8/3.75/1.53，模型暂时倾向 德国，可信度 88%。真实临场仍需结合首发和盘口变化。",
     "probabilities": {
       "home": 18,
-      "draw": 23,
+      "draw": 24,
       "away": 58
     },
     "handicap": "让球 +1.00",
@@ -149,7 +181,9 @@
     "id": "sporttery_2040134",
     "source": "sporttery",
     "sourceMatchId": "2040134",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六211",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "03:00",
     "competition": "国际赛",
@@ -162,6 +196,12 @@
       "draw": 3.6,
       "away": 1.47,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.28,
+      "draw": 3,
+      "away": 2.8,
+      "line": "+1.00"
     },
     "prediction": "客胜方向",
     "recommendation": "high",
@@ -186,7 +226,9 @@
     "id": "sporttery_2040135",
     "source": "sporttery",
     "sourceMatchId": "2040135",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六212",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "03:00",
     "competition": "国际赛",
@@ -198,6 +240,12 @@
       "draw": 2.92,
       "away": 2.06,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.58,
+      "draw": 3.6,
+      "away": 4.6,
+      "line": "+1.00"
     },
     "prediction": "客胜方向",
     "recommendation": "high",
@@ -222,7 +270,9 @@
     "id": "sporttery_2040137",
     "source": "sporttery",
     "sourceMatchId": "2040137",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六214",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "04:00",
     "competition": "国际赛",
@@ -233,6 +283,12 @@
       "draw": 4.25,
       "away": 1.34,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.74,
+      "draw": 3.3,
+      "away": 2.17,
+      "line": "+1.00"
     },
     "prediction": "客胜方向",
     "recommendation": "high",
@@ -257,7 +313,9 @@
     "id": "sporttery_2040138",
     "source": "sporttery",
     "sourceMatchId": "2040138",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六215",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "06:00",
     "competition": "国际赛",
@@ -269,6 +327,12 @@
       "draw": 5,
       "away": 10.5,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.72,
+      "draw": 3.7,
+      "away": 3.6,
+      "line": "-1.00"
     },
     "prediction": "主胜方向",
     "recommendation": "high",
@@ -293,7 +357,9 @@
     "id": "sporttery_2040139",
     "source": "sporttery",
     "sourceMatchId": "2040139",
-    "capturedAt": "2026-06-06T11:08:55.681Z",
+    "capturedAt": "2026-06-06T11:35:17.399Z",
+    "matchNo": "周六216",
+    "status": "scheduled",
     "date": "2026-06-07",
     "kickoff": "06:00",
     "competition": "国际赛",
@@ -305,6 +371,12 @@
       "draw": 3.7,
       "away": 1.47,
       "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.25,
+      "draw": 3.15,
+      "away": 2.72,
+      "line": "+1.00"
     },
     "prediction": "客胜方向",
     "recommendation": "high",

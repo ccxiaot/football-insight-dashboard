@@ -2,8 +2,11 @@ import type {
   DashboardMetrics,
   DateOption,
   MatchPrediction,
+  RecommendationLevel,
   RecommendationGroups,
 } from '../types';
+
+export type MatchSortKey = 'kickoff' | 'confidence' | 'odds';
 
 export function filterMatchesByDate(matches: MatchPrediction[], date: string): MatchPrediction[] {
   return matches
@@ -66,6 +69,42 @@ export function getDateOptions(matches: MatchPrediction[], today: string): DateO
       display: formatDateDisplay(date),
     };
   });
+}
+
+export function getCompetitionOptions(matches: MatchPrediction[]): string[] {
+  return ['全部赛事', ...Array.from(new Set(matches.map((match) => match.competition))).sort()];
+}
+
+export function filterMatches(matches: MatchPrediction[], filters: {
+  competition: string;
+  recommendation: 'all' | RecommendationLevel;
+}): MatchPrediction[] {
+  return matches.filter((match) => {
+    const competitionOk = filters.competition === '全部赛事' || match.competition === filters.competition;
+    const recommendationOk = filters.recommendation === 'all' || match.recommendation === filters.recommendation;
+    return competitionOk && recommendationOk;
+  });
+}
+
+export function sortMatches(matches: MatchPrediction[], sortKey: MatchSortKey): MatchPrediction[] {
+  return [...matches].sort((left, right) => {
+    if (sortKey === 'confidence') return right.confidence - left.confidence;
+    if (sortKey === 'odds') return (left.odds?.home ?? 99) - (right.odds?.home ?? 99);
+    return `${left.date} ${left.kickoff}`.localeCompare(`${right.date} ${right.kickoff}`);
+  });
+}
+
+export function countByStatus(matches: MatchPrediction[]) {
+  return matches.reduce(
+    (total, match) => {
+      const status = match.status ?? 'scheduled';
+      if (status === 'finished') total.finished += 1;
+      else if (status === 'live') total.live += 1;
+      else total.scheduled += 1;
+      return total;
+    },
+    { finished: 0, live: 0, scheduled: 0 },
+  );
 }
 
 function formatDateDisplay(date: string): string {

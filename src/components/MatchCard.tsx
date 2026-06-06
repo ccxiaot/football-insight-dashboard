@@ -22,7 +22,10 @@ export function MatchCard({ match, onOpen }: MatchCardProps) {
       type="button"
     >
       <div className="match-card-head">
-        <span>{match.competition}</span>
+        <span>
+          {match.matchNo ? `${match.matchNo} · ` : ''}
+          {match.competition}
+        </span>
         <strong>{match.kickoff}</strong>
       </div>
       <div className="match-teams">
@@ -39,6 +42,14 @@ export function MatchCard({ match, onOpen }: MatchCardProps) {
           <span>胜 {match.odds.home}</span>
           <span>平 {match.odds.draw}</span>
           <span>负 {match.odds.away}</span>
+        </div>
+      ) : null}
+      {match.handicapOdds ? (
+        <div className="odds-row muted">
+          <span>让球 {match.handicapOdds.line || '0'}</span>
+          <span>胜 {match.handicapOdds.home}</span>
+          <span>平 {match.handicapOdds.draw}</span>
+          <span>负 {match.handicapOdds.away}</span>
         </div>
       ) : null}
       <p>{match.analysis}</p>

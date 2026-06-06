@@ -72,6 +72,8 @@ export function normalizeSportteryRow({ row, capturedAt }) {
     source: 'sporttery',
     sourceMatchId: matchId,
     capturedAt,
+    matchNo: text(row.matchNumStr || row.matchNo || row.matchNum),
+    status: statusFromRow(row),
     date,
     kickoff,
     competition: text(row.leagueName || row.leagueAbbName || row.matchName, '竞彩赛事'),
@@ -80,6 +82,7 @@ export function normalizeSportteryRow({ row, capturedAt }) {
     homeFlag: isoFromTeam(homeTeam, row.homeTeamCode),
     awayFlag: isoFromTeam(awayTeam, row.awayTeamCode),
     odds,
+    handicapOdds: handicapPool || undefined,
     prediction,
     recommendation,
     confidence,
@@ -89,7 +92,7 @@ export function normalizeSportteryRow({ row, capturedAt }) {
     probabilities,
     handicap: handicapPool?.line ? `让球 ${handicapPool.line}` : '无让球参考',
     totalGoals: totalGoalsText(probabilities),
-    result: statusFromRow(row),
+    result: 'pending',
   };
 }
 
@@ -196,8 +199,9 @@ function buildAnalysis({ homeTeam, awayTeam, strongest, confidence, odds }) {
 
 function statusFromRow(row) {
   const status = text(row.matchStatus || row.status || row.statusName).toLowerCase();
-  if (status.includes('finish') || status.includes('result') || status.includes('完')) return 'pending';
-  return 'pending';
+  if (status.includes('finish') || status.includes('result') || status.includes('完')) return 'finished';
+  if (status.includes('live') || status.includes('进行')) return 'live';
+  return 'scheduled';
 }
 
 function isoFromTeam(teamName, teamCode) {

@@ -18,6 +18,9 @@ describe('App', () => {
     expect(await screen.findByText('可结算命中率')).toBeInTheDocument();
     expect(await screen.findByRole('button', { name: /今天/ })).toBeInTheDocument();
     expect(await screen.findByRole('button', { name: /比利时 vs 突尼斯/ })).toBeInTheDocument();
+    expect(screen.getByText('赛事筛选')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /全部分组/ })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'SP 值' })).toBeInTheDocument();
   });
 
   it('opens match detail from a card', async () => {

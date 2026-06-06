@@ -18,6 +18,11 @@ export type ProbabilityBreakdown = {
 
 export type MatchPrediction = {
   id: string;
+  source?: string;
+  sourceMatchId?: string;
+  capturedAt?: string;
+  matchNo?: string;
+  status?: 'scheduled' | 'live' | 'finished' | 'pending';
   date: string;
   kickoff: string;
   competition: string;
@@ -26,6 +31,7 @@ export type MatchPrediction = {
   homeFlag?: string;
   awayFlag?: string;
   odds?: Odds;
+  handicapOdds?: Odds & { line?: string };
   prediction: string;
   recommendation: RecommendationLevel;
   confidence: number;

@@ -3,9 +3,14 @@ import type { SyncMeta } from '../types';
 
 type SyncPanelProps = {
   meta: SyncMeta;
+  statusCounts?: {
+    finished: number;
+    live: number;
+    scheduled: number;
+  };
 };
 
-export function SyncPanel({ meta }: SyncPanelProps) {
+export function SyncPanel({ meta, statusCounts }: SyncPanelProps) {
   const generated = new Date(meta.generatedAt).toLocaleString('zh-CN', {
     hour: '2-digit',
     minute: '2-digit',
@@ -30,6 +35,13 @@ export function SyncPanel({ meta }: SyncPanelProps) {
         <div>
           <dt>历史库</dt>
           <dd>{meta.historyCount} 场</dd>
+        </div>
+        <div>
+          <dt>状态</dt>
+          <dd>
+            完 {statusCounts?.finished ?? 0} / 赛 {statusCounts?.live ?? 0} / 待{' '}
+            {statusCounts?.scheduled ?? meta.currentCount}
+          </dd>
         </div>
         <div>
           <dt>数据源</dt>
