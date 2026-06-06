@@ -377,6 +377,10 @@ dd {
   gap: 14px;
 }
 
+.match-grid.compact {
+  grid-template-columns: 1fr;
+}
+
 .match-card {
   display: grid;
   gap: 12px;
@@ -431,6 +435,116 @@ dd {
 
 .panel-view {
   display: block;
+}
+
+.overview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.overview-main,
+.overview-side {
+  display: grid;
+  gap: 14px;
+}
+
+.section-title {
+  padding: 16px;
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.section-title p {
+  margin: 8px 0 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.risk-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.risk-card,
+.quick-board {
+  padding: 14px;
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.risk-card div,
+.quick-board strong,
+.quick-board small {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-card b {
+  display: block;
+  margin: 10px 0 6px;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.risk-card p,
+.quick-board small {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+.risk-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 8px;
+  color: #0f766e;
+  background: #ecfdf5;
+}
+
+.quick-board {
+  display: grid;
+  gap: 10px;
+}
+
+.quick-board button {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 44px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.quick-board button span,
+.quick-board button em {
+  color: #64748b;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.quick-board button b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .simple-list {
@@ -519,7 +633,8 @@ dd {
   .sync-panel,
   .match-toolbar,
   .summary-grid,
-  .match-grid {
+  .match-grid,
+  .overview-layout {
     grid-template-columns: 1fr;
   }
 }

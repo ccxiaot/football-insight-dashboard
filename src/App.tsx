@@ -8,6 +8,7 @@ import { MatchDetailModal } from './components/MatchDetailModal';
 import { MatchToolbar } from './components/MatchToolbar';
 import { Navbar } from './components/Navbar';
 import { NoticeBar } from './components/NoticeBar';
+import { PreMatchOverview } from './components/PreMatchOverview';
 import { SummaryGrid } from './components/SummaryGrid';
 import { SyncPanel } from './components/SyncPanel';
 import { WorldCupSpotlight } from './components/WorldCupSpotlight';
@@ -65,15 +66,24 @@ export default function App() {
   const statusCounts = useMemo(() => countByStatus(matches), [matches]);
   const featuredMatch = filteredMatches[0] ?? matches[0] ?? null;
 
-  const showDashboard = activeView === 'overview' || activeView === 'predictions';
-
   return (
     <div className="app-shell">
       <Navbar activeView={activeView} onViewChange={setActiveView} />
       <main>
         <NoticeBar />
         {!dashboardData || !syncMeta || !featuredMatch ? <section className="empty-state">数据加载中...</section> : null}
-        {showDashboard && dashboardData && syncMeta && featuredMatch ? (
+        {activeView === 'overview' && dashboardData && syncMeta && featuredMatch ? (
+          <PreMatchOverview
+            featuredMatch={featuredMatch}
+            groups={groups}
+            matches={dateMatches}
+            metrics={metrics}
+            onOpenMatch={setSelectedMatch}
+            statusCounts={statusCounts}
+            syncMeta={syncMeta}
+          />
+        ) : null}
+        {activeView === 'predictions' && dashboardData && syncMeta && featuredMatch ? (
           <>
             <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />
             <SummaryGrid groups={groups} metrics={metrics} />
