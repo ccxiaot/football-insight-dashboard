@@ -31,7 +31,7 @@ const today = '2026-06-06';
 export default function App() {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [activeView, setActiveView] = useState('overview');
-  const [selectedDate, setSelectedDate] = useState(today);
+  const [selectedDate, setSelectedDate] = useState('all');
   const [competition, setCompetition] = useState('全部赛事');
   const [recommendation, setRecommendation] = useState<'all' | RecommendationLevel>('all');
   const [sortKey, setSortKey] = useState<MatchSortKey>('kickoff');

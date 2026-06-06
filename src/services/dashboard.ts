@@ -9,6 +9,9 @@ import type {
 export type MatchSortKey = 'kickoff' | 'confidence' | 'odds';
 
 export function filterMatchesByDate(matches: MatchPrediction[], date: string): MatchPrediction[] {
+  if (date === 'all') {
+    return [...matches].sort((left, right) => `${left.date} ${left.kickoff}`.localeCompare(`${right.date} ${right.kickoff}`));
+  }
   return matches
     .filter((match) => match.date === date)
     .sort((left, right) => left.kickoff.localeCompare(right.kickoff));
@@ -50,7 +53,9 @@ export function getDateOptions(matches: MatchPrediction[], today: string): DateO
   const todayTime = new Date(`${today}T00:00:00`).getTime();
   const uniqueDates = [...new Set(matches.map((match) => match.date))].sort();
 
-  return uniqueDates.map((date) => {
+  return [
+    { date: 'all', label: '全部日期', display: `${matches.length} 场` },
+    ...uniqueDates.map((date) => {
     const diffDays = Math.round((new Date(`${date}T00:00:00`).getTime() - todayTime) / 86400000);
     const label =
       diffDays === 0
@@ -63,12 +68,13 @@ export function getDateOptions(matches: MatchPrediction[], today: string): DateO
               ? `${diffDays}天后`
               : `历史 ${Math.abs(diffDays)}天前`;
 
-    return {
+      return {
       date,
       label,
       display: formatDateDisplay(date),
-    };
-  });
+      };
+    }),
+  ];
 }
 
 export function getCompetitionOptions(matches: MatchPrediction[]): string[] {

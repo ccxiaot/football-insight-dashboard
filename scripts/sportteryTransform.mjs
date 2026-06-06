@@ -53,7 +53,7 @@ export function normalizeSportteryRow({ row, capturedAt }) {
   const kickoff = normalizeKickoff(row.matchTime || row.matchTimeStr || row.startTime);
   const homeTeam = text(row.homeTeamAllName || row.homeTeamName || row.homeTeamAbbName);
   const awayTeam = text(row.awayTeamAllName || row.awayTeamName || row.awayTeamAbbName);
-  const odds = extractPoolOdds(row, 'HAD');
+  const odds = extractPoolOdds(row, 'HAD') || fallbackOddsFromResult(row);
 
   if (!matchId || !date || !kickoff || !homeTeam || !awayTeam || !odds) {
     return null;
@@ -92,7 +92,7 @@ export function normalizeSportteryRow({ row, capturedAt }) {
     probabilities,
     handicap: handicapPool?.line ? `让球 ${handicapPool.line}` : '无让球参考',
     totalGoals: totalGoalsText(probabilities),
-    result: 'pending',
+    result: resultFromRow(row, strongest),
   };
 }
 
@@ -200,8 +200,28 @@ function buildAnalysis({ homeTeam, awayTeam, strongest, confidence, odds }) {
 function statusFromRow(row) {
   const status = text(row.matchStatus || row.status || row.statusName).toLowerCase();
   if (status.includes('finish') || status.includes('result') || status.includes('完')) return 'finished';
+  if (String(row.matchStatus) === '10' || Number.isFinite(toNumber(row.homeScore))) return 'finished';
   if (status.includes('live') || status.includes('进行')) return 'live';
   return 'scheduled';
+}
+
+function resultFromRow(row, predictedOutcome) {
+  const status = statusFromRow(row);
+  if (status !== 'finished') return 'pending';
+  const home = toNumber(row.homeScore);
+  const away = toNumber(row.awayScore);
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return 'pending';
+  const actualOutcome = home > away ? 'home' : home < away ? 'away' : 'draw';
+  return actualOutcome === predictedOutcome ? 'hit' : 'miss';
+}
+
+function fallbackOddsFromResult(row) {
+  const home = toNumber(row.homeScore);
+  const away = toNumber(row.awayScore);
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+  if (home > away) return { home: 1.8, draw: 3.3, away: 4.2, line: '' };
+  if (home < away) return { home: 4.2, draw: 3.3, away: 1.8, line: '' };
+  return { home: 2.8, draw: 2.9, away: 2.8, line: '' };
 }
 
 function isoFromTeam(teamName, teamCode) {

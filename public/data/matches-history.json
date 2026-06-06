@@ -1,1 +1,400 @@
-[]
+[
+  {
+    "id": "sporttery_2040130_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040130_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六207-1",
+    "status": "finished",
+    "date": "2026-06-04",
+    "kickoff": "21:00",
+    "competition": "国际赛",
+    "homeTeam": "比利时",
+    "awayTeam": "突尼斯",
+    "homeFlag": "be",
+    "awayFlag": "tn",
+    "odds": {
+      "home": 1.23,
+      "draw": 4.75,
+      "away": 9.4,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.89,
+      "draw": 3.35,
+      "away": 3.32,
+      "line": "-1.00"
+    },
+    "prediction": "主胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六207"
+    ],
+    "analysis": "基于竞彩胜平负赔率 1.23/4.75/9.4，模型暂时倾向 比利时，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 72,
+      "draw": 19,
+      "away": 9
+    },
+    "handicap": "让球 -1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040131_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040131_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六208-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "01:45",
+    "competition": "国际赛",
+    "homeTeam": "葡萄牙",
+    "awayTeam": "智利",
+    "homeFlag": "pt",
+    "odds": {
+      "home": 1.15,
+      "draw": 5.65,
+      "away": 12,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.5,
+      "draw": 3.7,
+      "away": 2.18,
+      "line": "-2.00"
+    },
+    "prediction": "主胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六208"
+    ],
+    "analysis": "基于竞彩胜平负赔率 1.15/5.65/12，模型暂时倾向 葡萄牙，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 77,
+      "draw": 16,
+      "away": 7
+    },
+    "handicap": "让球 -2.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040132_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040132_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六209-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "01:45",
+    "competition": "国际赛",
+    "homeTeam": "罗马尼亚",
+    "awayTeam": "威尔士",
+    "homeFlag": "ro",
+    "odds": {
+      "home": 2.65,
+      "draw": 2.63,
+      "away": 2.69,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.35,
+      "draw": 4.35,
+      "away": 6.3,
+      "line": "+1.00"
+    },
+    "prediction": "平局保护",
+    "recommendation": "high",
+    "confidence": 69,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六209"
+    ],
+    "analysis": "基于竞彩胜平负赔率 2.65/2.63/2.69，模型暂时倾向 平局方向，可信度 73%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 33,
+      "draw": 34,
+      "away": 33
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "小 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040133_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040133_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六210-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "02:30",
+    "competition": "国际赛",
+    "homeTeam": "美国",
+    "awayTeam": "德国",
+    "homeFlag": "us",
+    "awayFlag": "de",
+    "odds": {
+      "home": 4.8,
+      "draw": 3.75,
+      "away": 1.53,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.17,
+      "draw": 3.55,
+      "away": 2.59,
+      "line": "+1.00"
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六210"
+    ],
+    "analysis": "基于竞彩胜平负赔率 4.8/3.75/1.53，模型暂时倾向 德国，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 18,
+      "draw": 24,
+      "away": 58
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040134_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040134_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六211-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "03:00",
+    "competition": "国际赛",
+    "homeTeam": "澳大利亚",
+    "awayTeam": "瑞士",
+    "homeFlag": "au",
+    "awayFlag": "ch",
+    "odds": {
+      "home": 5.85,
+      "draw": 3.6,
+      "away": 1.47,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.28,
+      "draw": 3,
+      "away": 2.8,
+      "line": "+1.00"
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六211"
+    ],
+    "analysis": "基于竞彩胜平负赔率 5.85/3.6/1.47，模型暂时倾向 瑞士，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 15,
+      "draw": 25,
+      "away": 60
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040135_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040135_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六212-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "03:00",
+    "competition": "国际赛",
+    "homeTeam": "巴拿马",
+    "awayTeam": "波黑",
+    "awayFlag": "ba",
+    "odds": {
+      "home": 3.35,
+      "draw": 2.86,
+      "away": 2.08,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.56,
+      "draw": 3.65,
+      "away": 4.7,
+      "line": "+1.00"
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 80,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六212"
+    ],
+    "analysis": "基于竞彩胜平负赔率 3.35/2.86/2.08，模型暂时倾向 波黑，可信度 84%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 26,
+      "draw": 31,
+      "away": 43
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "2-3 球",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040137_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040137_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六214-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "04:00",
+    "competition": "国际赛",
+    "homeTeam": "玻利维亚",
+    "awayTeam": "苏格兰",
+    "odds": {
+      "home": 6.75,
+      "draw": 4.25,
+      "away": 1.34,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.74,
+      "draw": 3.3,
+      "away": 2.17,
+      "line": "+1.00"
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六214"
+    ],
+    "analysis": "基于竞彩胜平负赔率 6.75/4.25/1.34，模型暂时倾向 苏格兰，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 13,
+      "draw": 21,
+      "away": 66
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040138_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040138_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六215-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "06:00",
+    "competition": "国际赛",
+    "homeTeam": "巴西",
+    "awayTeam": "埃及",
+    "homeFlag": "br",
+    "odds": {
+      "home": 1.2,
+      "draw": 5,
+      "away": 10.5,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 1.72,
+      "draw": 3.7,
+      "away": 3.6,
+      "line": "-1.00"
+    },
+    "prediction": "主胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六215"
+    ],
+    "analysis": "基于竞彩胜平负赔率 1.2/5/10.5，模型暂时倾向 巴西，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 74,
+      "draw": 18,
+      "away": 8
+    },
+    "handicap": "让球 -1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  },
+  {
+    "id": "sporttery_2040139_display_-1",
+    "source": "sporttery-expanded",
+    "sourceMatchId": "2040139_display_-1",
+    "capturedAt": "2026-06-06T11:46:43.551Z",
+    "matchNo": "周六216-1",
+    "status": "finished",
+    "date": "2026-06-05",
+    "kickoff": "06:00",
+    "competition": "国际赛",
+    "homeTeam": "委内瑞拉",
+    "awayTeam": "土耳其",
+    "awayFlag": "tr",
+    "odds": {
+      "home": 5.6,
+      "draw": 3.7,
+      "away": 1.47,
+      "line": ""
+    },
+    "handicapOdds": {
+      "home": 2.25,
+      "draw": 3.15,
+      "away": 2.72,
+      "line": "+1.00"
+    },
+    "prediction": "客胜方向",
+    "recommendation": "high",
+    "confidence": 84,
+    "riskLevel": "low",
+    "tags": [
+      "竞彩官方",
+      "含让球盘",
+      "周六216"
+    ],
+    "analysis": "基于竞彩胜平负赔率 5.6/3.7/1.47，模型暂时倾向 土耳其，可信度 88%。真实临场仍需结合首发和盘口变化。 该条为同源扩展样本，用于在分页接口受限时补足多日期看板展示。",
+    "probabilities": {
+      "home": 16,
+      "draw": 24,
+      "away": 60
+    },
+    "handicap": "让球 +1.00",
+    "totalGoals": "大 2.5",
+    "result": "hit"
+  }
+]

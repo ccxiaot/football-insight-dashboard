@@ -95,7 +95,7 @@ describe('dashboard services', () => {
   it('builds nearby date options with labels', () => {
     const options = getDateOptions(matches, '2026-06-06');
 
-    expect(options.map((option) => option.label)).toEqual(['今天', '明天']);
-    expect(options.map((option) => option.date)).toEqual(['2026-06-06', '2026-06-07']);
+    expect(options.map((option) => option.label)).toEqual(['全部日期', '今天', '明天']);
+    expect(options.map((option) => option.date)).toEqual(['all', '2026-06-06', '2026-06-07']);
   });
 });

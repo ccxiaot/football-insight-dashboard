@@ -16,7 +16,7 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: '赛前观察' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '赛事预测' })).toBeInTheDocument();
     expect(await screen.findByText('可结算命中率')).toBeInTheDocument();
-    expect(await screen.findByRole('button', { name: /今天/ })).toBeInTheDocument();
+    expect(await screen.findByRole('button', { name: /全部日期/ })).toBeInTheDocument();
     expect(await screen.findByRole('button', { name: /比利时 vs 突尼斯/ })).toBeInTheDocument();
     expect(screen.getByText('赛事筛选')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /全部分组/ })).toBeInTheDocument();
