@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { BetSlipPanel } from './components/BetSlipPanel';
 import { DateFilters } from './components/DateFilters';
 import { EmptyState } from './components/EmptyState';
@@ -10,29 +10,45 @@ import { NoticeBar } from './components/NoticeBar';
 import { SummaryGrid } from './components/SummaryGrid';
 import { SyncPanel } from './components/SyncPanel';
 import { WorldCupSpotlight } from './components/WorldCupSpotlight';
-import { matches } from './data/matches';
-import { syncMeta } from './data/syncMeta';
 import {
   calculateDashboardMetrics,
   filterMatchesByDate,
   getDateOptions,
   groupRecommendations,
 } from './services/dashboard';
-import type { MatchPrediction } from './types';
+import { loadDashboardData } from './services/dataLoader';
+import type { DashboardData, MatchPrediction } from './types';
 import './index.css';
 
 const today = '2026-06-06';
 
 export default function App() {
+  const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [activeView, setActiveView] = useState('overview');
   const [selectedDate, setSelectedDate] = useState(today);
   const [selectedMatch, setSelectedMatch] = useState<MatchPrediction | null>(null);
 
-  const filteredMatches = useMemo(() => filterMatchesByDate(matches, selectedDate), [selectedDate]);
-  const metrics = useMemo(() => calculateDashboardMetrics(matches, selectedDate), [selectedDate]);
+  useEffect(() => {
+    let mounted = true;
+
+    void loadDashboardData().then((data) => {
+      if (mounted) {
+        setDashboardData(data);
+      }
+    });
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const matches = useMemo(() => dashboardData?.matches ?? [], [dashboardData]);
+  const syncMeta = dashboardData?.syncMeta;
+  const filteredMatches = useMemo(() => filterMatchesByDate(matches, selectedDate), [matches, selectedDate]);
+  const metrics = useMemo(() => calculateDashboardMetrics(matches, selectedDate), [matches, selectedDate]);
   const groups = useMemo(() => groupRecommendations(filteredMatches), [filteredMatches]);
-  const dateOptions = useMemo(() => getDateOptions(matches, today), []);
-  const featuredMatch = filteredMatches[0] ?? matches[0];
+  const dateOptions = useMemo(() => getDateOptions(matches, today), [matches]);
+  const featuredMatch = filteredMatches[0] ?? matches[0] ?? null;
 
   const showDashboard = activeView === 'overview' || activeView === 'predictions';
 
@@ -41,7 +57,8 @@ export default function App() {
       <Navbar activeView={activeView} onViewChange={setActiveView} />
       <main>
         <NoticeBar />
-        {showDashboard ? (
+        {!dashboardData || !syncMeta || !featuredMatch ? <section className="empty-state">数据加载中...</section> : null}
+        {showDashboard && dashboardData && syncMeta && featuredMatch ? (
           <>
             <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />
             <SummaryGrid groups={groups} metrics={metrics} />
@@ -62,7 +79,7 @@ export default function App() {
             </section>
           </>
         ) : null}
-        {activeView === 'worldcup' ? (
+        {activeView === 'worldcup' && featuredMatch ? (
           <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />
         ) : null}
         {activeView === 'betslip' ? <BetSlipPanel matches={matches} /> : null}

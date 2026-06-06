@@ -44,6 +44,12 @@ export type SyncMeta = {
   currentCount: number;
   historyCount: number;
   status: string;
+  mode?: 'generated' | 'fallback';
+};
+
+export type DashboardData = {
+  matches: MatchPrediction[];
+  syncMeta: SyncMeta;
 };
 
 export type DashboardMetrics = {

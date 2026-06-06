@@ -1,0 +1,44 @@
+name: Sync Demo Football Data
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demo-football-data-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-demo-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Generate demo data
+        run: npm run sync:demo
+      - name: Validate data
+        run: npm run validate:data
+      - name: Commit generated data
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: sync demo football data"
+            git push origin HEAD:main
+          else
+            echo "No demo data changes."
+          fi
