@@ -3,12 +3,12 @@ import { BetSlipPanel } from './components/BetSlipPanel';
 import { DateFilters } from './components/DateFilters';
 import { EmptyState } from './components/EmptyState';
 import { HitChallenge } from './components/HitChallenge';
-import { MatchCard } from './components/MatchCard';
 import { MatchDetailModal } from './components/MatchDetailModal';
 import { MatchToolbar } from './components/MatchToolbar';
 import { Navbar } from './components/Navbar';
 import { NoticeBar } from './components/NoticeBar';
 import { PreMatchOverview } from './components/PreMatchOverview';
+import { PredictionsTable } from './components/PredictionsTable';
 import { SummaryGrid } from './components/SummaryGrid';
 import { SyncPanel } from './components/SyncPanel';
 import { WorldCupSpotlight } from './components/WorldCupSpotlight';
@@ -84,7 +84,7 @@ export default function App() {
           />
         ) : null}
         {activeView === 'predictions' && dashboardData && syncMeta && featuredMatch ? (
-          <>
+          <div className="predictions-page">
             <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />
             <SummaryGrid groups={groups} metrics={metrics} />
             <SyncPanel meta={syncMeta} statusCounts={statusCounts} />
@@ -113,16 +113,12 @@ export default function App() {
               recommendation={recommendation}
               sortKey={sortKey}
             />
-            <section className="match-grid" aria-label="赛事预测列表">
-              {filteredMatches.length ? (
-                filteredMatches.map((match) => (
-                  <MatchCard key={match.id} match={match} onOpen={setSelectedMatch} />
-                ))
-              ) : (
-                <EmptyState />
-              )}
-            </section>
-          </>
+            {filteredMatches.length ? (
+              <PredictionsTable matches={filteredMatches} onOpenMatch={setSelectedMatch} />
+            ) : (
+              <EmptyState />
+            )}
+          </div>
         ) : null}
         {activeView === 'worldcup' && featuredMatch ? (
           <WorldCupSpotlight featuredMatch={featuredMatch} onOpenMatch={setSelectedMatch} />

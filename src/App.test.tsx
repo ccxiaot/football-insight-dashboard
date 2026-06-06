@@ -28,10 +28,15 @@ describe('App', () => {
 
     expect(await screen.findByText('可结算命中率')).toBeInTheDocument();
     expect(await screen.findByRole('button', { name: /全部日期/ })).toBeInTheDocument();
-    expect(await screen.findByRole('button', { name: /比利时 vs 突尼斯/ })).toBeInTheDocument();
     expect(screen.getByText('赛事筛选')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /全部分组/ })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'SP 值' })).toBeInTheDocument();
+    expect(screen.getByRole('table', { name: /国际友谊赛预测表/ })).toBeInTheDocument();
+    expect(screen.getAllByRole('columnheader', { name: '胜平负 / 让球' }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('columnheader', { name: '1X2' }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('columnheader', { name: '总进球' }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('columnheader', { name: 'BEST' }).length).toBeGreaterThan(0);
+    expect(screen.getByRole('button', { name: /查看 比利时 vs 突尼斯/ })).toBeInTheDocument();
   });
 
   it('opens match detail from a card', async () => {
