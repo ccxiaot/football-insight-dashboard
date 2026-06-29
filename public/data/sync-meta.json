@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T19:44:31.937Z",
+  "generatedAt": "2026-06-29T04:58:53.227Z",
   "sourceLabel": "sporttery-fallback",
   "currentCount": 27,
   "historyCount": 9,
@@ -19,12 +19,12 @@
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
+      "error": "fetch failed"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=live&pageSize=80&pageNo=1&pageType=0",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=live&pageSize=80&pageNo=1&pageType=0 -> HTTP 567"
+      "error": "fetch failed"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=result&pageSize=80&pageNo=1&pageType=0",
