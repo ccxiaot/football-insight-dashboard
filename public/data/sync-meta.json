@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T04:20:36.805Z",
+  "generatedAt": "2026-07-02T09:31:19.888Z",
   "sourceLabel": "sporttery-fallback",
   "currentCount": 27,
   "historyCount": 9,
@@ -14,7 +14,7 @@
     {
       "url": "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had&channel=c",
       "ok": false,
-      "error": "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had&channel=c -> HTTP 567"
+      "error": "fetch failed"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/fb/getMatchDataPageListV1.qry?method=concern&pageSize=80&pageNo=1&pageType=0",
