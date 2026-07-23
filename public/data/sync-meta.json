@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T14:29:58.324Z",
+  "generatedAt": "2026-07-23T19:44:28.062Z",
   "sourceLabel": "sporttery-fallback",
   "currentCount": 27,
   "historyCount": 9,
@@ -9,7 +9,7 @@
     {
       "url": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchListV1.qry?clientCode=3001",
       "ok": false,
-      "error": "fetch failed"
+      "error": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchListV1.qry?clientCode=3001 -> HTTP 567"
     },
     {
       "url": "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had&channel=c",
